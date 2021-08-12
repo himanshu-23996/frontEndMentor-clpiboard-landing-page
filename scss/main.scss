@@ -1,1 +1,78 @@
 @import './reset';
+@import './mixin';
+body {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    // Setting Background
+    background-image: url("../images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    // Setting Display
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    // Styling the children
+    .__logo-holder {
+        padding-top: 7em;
+        padding-bottom: 3em;
+    }
+    .__content-holder {
+        width: 60%;
+        // Setting Display
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+        h2 {
+            text-align: center;
+            padding-inline: 0px;
+            width: 100%;
+            font-size: 3em;
+            color: $dark-grayish-blue;
+        }
+        p {
+            text-align: center;
+            width: 80%;
+            padding-block: 1.2em;
+            text-align: center;
+            font-size: 1.2em;
+            color: $grayish-blue;
+        }
+    }
+    .__buttons-holder {
+        padding-block: 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            .button-1 {
+                margin-inline: 0.5em;
+                @include set-fonts($sz: 1.2em, $wt: 600, $textCol: white);
+                background-color: $strong-cyan;
+                padding-block: 0.8em;
+                padding-inline: 2em;
+                border-radius: 40px;
+                border-bottom: 4px solid hsl(171, 66%, 33%);
+            }
+            .button-2 {
+                margin-inline: 0.5em;
+                @include set-fonts($sz: 1.2em, $wt: 600, $textCol: white);
+                background-color: $light-blue;
+                padding-block: 0.8em;
+                padding-inline: 2em;
+                border-radius: 40px;
+                border-bottom: 4px solid hsl(233, 54%, 55%);
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

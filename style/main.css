@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
 *,
 *::before,
 *::after {
@@ -5,4 +6,118 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background-image: url("../images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .__logo-holder {
+  padding-top: 7em;
+  padding-bottom: 3em;
+}
+
+header .__content-holder {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: auto;
+}
+
+header .__content-holder h2 {
+  text-align: center;
+  padding-inline: 0px;
+  width: 100%;
+  font-size: 3em;
+  color: #4c545d;
+}
+
+header .__content-holder p {
+  text-align: center;
+  width: 80%;
+  padding-block: 1.2em;
+  text-align: center;
+  font-size: 1.2em;
+  color: #9fabb2;
+}
+
+header .__buttons-holder {
+  padding-block: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .__buttons-holder a {
+  text-decoration: none;
+}
+
+header .__buttons-holder a .button-1 {
+  margin-inline: 0.5em;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2em;
+  background-color: #26baa4;
+  padding-block: 0.8em;
+  padding-inline: 2em;
+  border-radius: 40px;
+  border-bottom: 4px solid #1d8c7b;
+}
+
+header .__buttons-holder a .button-2 {
+  margin-inline: 0.5em;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2em;
+  background-color: #6173ff;
+  padding-block: 0.8em;
+  padding-inline: 2em;
+  border-radius: 40px;
+  border-bottom: 4px solid #4e5dca;
+}
+
+header .__buttons-holder a:hover {
+  cursor: pointer;
 }

@@ -1,0 +1,7 @@
+@import './config';
+@mixin set-fonts($sz: auto, $wt: 400, $textCol:black) {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: $wt;
+    color: $textCol;
+    font-size: $sz;
+}
