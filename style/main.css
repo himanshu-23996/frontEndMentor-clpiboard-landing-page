@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;400;600&display=swap");
 *,
 *::before,
 *::after {
@@ -120,4 +120,79 @@ header .__buttons-holder a .button-2 {
 
 header .__buttons-holder a:hover {
   cursor: pointer;
+}
+
+footer {
+  background-color: rgba(250, 250, 250, 0.767);
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-block: 2.5em;
+}
+
+footer .logo-holder img {
+  height: 4em;
+  width: 4em;
+}
+
+footer .link-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 65%;
+}
+
+footer .link-holder span {
+  padding-block: 0.5em;
+  width: 13em;
+}
+
+footer .link-holder span a {
+  text-decoration: unset;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 200;
+  color: black;
+  font-size: 1.2em;
+}
+
+footer .link-holder span a:hover {
+  cursor: pointer;
+  color: #26baa4;
+}
+
+footer .social-button-holder {
+  padding-block: 2%;
+}
+
+footer .social-button-holder div {
+  display: inline;
+  padding-inline: 0.5em;
+}
+
+footer .social-button-holder div a {
+  text-decoration: unset;
+}
+
+footer .social-button-holder div a i {
+  color: #4c545d;
+  font-size: 1.5em;
+}
+
+footer .social-button-holder div a:hover {
+  cursor: pointer;
+}
+
+footer .social-button-holder div a:hover i {
+  color: #26baa4;
 }

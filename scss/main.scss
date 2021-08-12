@@ -76,3 +76,57 @@ header {
         }
     }
 }
+
+footer {
+    background-color: hsla(0, 0%, 98%, 0.767);
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding-block: 2.5em;
+    .logo-holder {
+        img {
+            height: 4em;
+            width: 4em;
+        }
+    }
+    .link-holder {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 65%;
+        span {
+            padding-block: 0.5em;
+            width: 13em;
+            a {
+                text-decoration: unset;
+                @include set-fonts($sz: 1.2em, $wt: 200, $textCol: black);
+                &:hover {
+                    cursor: pointer;
+                    color: $strong-cyan;
+                }
+            }
+        }
+    }
+    .social-button-holder {
+        padding-block: 2%;
+        div {
+            display: inline;
+            padding-inline: 0.5em;
+            span {}
+            a {
+                text-decoration: unset;
+                i {
+                    color: $dark-grayish-blue;
+                    font-size: 1.5em;
+                }
+                &:hover {
+                    cursor: pointer;
+                    i {
+                        color: $strong-cyan;
+                    }
+                }
+            }
+        }
+    }
+}
