@@ -1,242 +1,257 @@
-@import './reset';
-@import './mixin';
-body {
-    width: 100%;
-    height: auto;
-}
-
-header {
-    // Setting Background
-    background-image: url("../images/bg-header-desktop.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-    // Setting Display
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    // Styling the children
-    .__logo-holder {
-        padding-top: 7em;
-        padding-bottom: 3em;
+    @import './reset';
+    @import './mixin';
+    body {
+        width: 100%;
+        height: auto;
     }
-    .__content-holder {
-        width: 60%;
+    
+    header {
+        // Setting Background
+        background-image: url("../images/bg-header-desktop.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
         // Setting Display
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-        h2 {
-            text-align: center;
-            padding-inline: 0px;
-            width: 100%;
-            font-size: 3em;
-            color: $dark-grayish-blue;
+        @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+        // Styling the children
+        .__logo-holder {
+            padding-top: 7em;
+            padding-bottom: 3em;
         }
-        p {
+        .__content-holder {
+            width: 60%;
+            // Setting Display
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+            @include set-fonts($sz: 1.2em, $wt: 400, $textCol: $dark-grayish-blue);
             text-align: center;
-            width: 80%;
-            padding-block: 1.2em;
-            text-align: center;
-            font-size: 1.2em;
-            color: $grayish-blue;
+            h2 {
+                font-size: 2.5em;
+            }
+            p {
+                width: 80%;
+                padding-block: 1em;
+                font-size: 1em;
+                color: $grayish-blue;
+                line-height: 1.5em;
+            }
         }
-    }
-    .__buttons-holder {
-        padding-block: 2em;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        a {
-            text-decoration: none;
-            .button-1 {
-                margin-inline: 0.5em;
-                @include set-fonts($sz: 1.2em, $wt: 600, $textCol: white);
-                background-color: $strong-cyan;
-                padding-block: 0.8em;
-                padding-inline: 2em;
-                border-radius: 40px;
-                border-bottom: 4px solid hsl(171, 66%, 33%);
-            }
-            .button-2 {
-                margin-inline: 0.5em;
-                @include set-fonts($sz: 1.2em, $wt: 600, $textCol: white);
-                background-color: $light-blue;
-                padding-block: 0.8em;
-                padding-inline: 2em;
-                border-radius: 40px;
-                border-bottom: 4px solid hsl(233, 54%, 55%);
-            }
-            &:hover {
-                cursor: pointer;
+        .__buttons-holder {
+            @include set-flex-display($dir: row, $algn-itm: center, $jst-ctnt: center);
+            padding-block: 2em;
+            a {
+                text-decoration: none;
+                .button-1 {
+                    @include create-button($bg-color: $strong-cyan, $bdr-color: hsl(171, 66%, 33%));
+                }
+                .button-2 {
+                    @include create-button($bg-color: $light-blue, $bdr-color: hsl(233, 54%, 55%));
+                }
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .section-1 {
-        padding-top: 6em;
-        padding-bottom: 4em;
-        width: 60%;
-        // Setting Display
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-        h2 {
-            text-align: center;
-            padding-inline: 0px;
-            width: 100%;
-            font-size: 2.5em;
-            color: $dark-grayish-blue;
-        }
-        p {
-            text-align: center;
-            width: 80%;
-            padding-block: 1.2em;
-            text-align: center;
-            font-size: 1.2em;
-            color: $grayish-blue;
-        }
-    }
-    .section-2 {
-        display: flex;
-        img {
-            left: -100px;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-evenly;
-            padding-inline: 6em;
-            padding-bottom: 0em;
+    
+    main {
+        @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: flex-start);
+        .section-1 {
+            padding-top: 6em;
+            padding-bottom: 4em;
+            width: 60%;
+            // Setting Display
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
             @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-            .c-1 {
-                h3 {
-                    font-size: 1.5em;
-                    font-weight: 400;
+            text-align: center;
+            h2 {
+                font-size: 2em;
+                color: $dark-grayish-blue;
+            }
+            p {
+                width: 80%;
+                padding-block: 1.2em;
+                font-size: 1.2em;
+                color: $grayish-blue;
+                font-weight: 200;
+            }
+        }
+        .section-2 {
+            display: flex;
+            img {
+                left: -100px;
+            }
+            .content {
+                @include set-flex-display($dir: column, $algn-itm: flex-start, $jst-ctnt: space-evenly);
+                padding-inline: 6em;
+                padding-bottom: 0em;
+                @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+                .c {
+                    h2 {
+                        color: $dark-grayish-blue;
+                        font-size: 1.5em;
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 1em;
+                        font-weight: 200;
+                        line-height: 1.5em;
+                        color: $grayish-blue;
+                    }
+                }
+            }
+        }
+        .section-3 {
+            padding-top: 6em;
+            padding-bottom: 4em;
+            width: 60%;
+            // Setting Display
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+            @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+            text-align: center;
+            h3 {
+                font-size: 2em;
+                color: $dark-grayish-blue;
+            }
+            p {
+                width: 80%;
+                padding-block: 1.2em;
+                font-size: 1.2em;
+                color: $grayish-blue;
+                line-height: 1.5em;
+                font-weight: 200;
+            }
+        }
+        .section-4 {}
+        .section-5 {
+            width: 60%;
+            // Setting Display
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+            @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+            text-align: center;
+            h3 {
+                font-size: 2em;
+                color: $dark-grayish-blue;
+            }
+            p {
+                width: 80%;
+                padding-block: 1.2em;
+                font-size: 1.2em;
+                color: $grayish-blue;
+                font-weight: 200;
+            }
+        }
+        .section-6 {
+            padding-top: 3em;
+            @include set-flex-display($dir: row, $algn-itm: center, $jst-ctnt: space-around);
+            .display-feature {
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
+                @include set-fonts($sz: 1.5em, $wt: 400, $textCol: $dark-grayish-blue);
+                text-align: center;
+                padding-inline: 2.5em;
+                h4 {
+                    padding-top: 2em;
                 }
                 p {
-                    font-size: 1em;
+                    padding-block: 1.5em;
+                    width: 300px;
+                    color: $grayish-blue;
+                    font-size: 0.65em;
                     font-weight: 200;
                     line-height: 1.5em;
-                    color: $grayish-blue;
-                }
-            }
-            .c-2 {
-                h3 {
-                    font-size: 1.5em;
-                    font-weight: 400;
-                }
-                p {
-                    font-size: 1em;
-                    font-weight: 200;
-                    line-height: 1.5em;
-                    color: $grayish-blue;
-                }
-            }
-            .c-3 {
-                h3 {
-                    font-size: 1.5em;
-                    font-weight: 400;
-                }
-                p {
-                    font-size: 1em;
-                    font-weight: 200;
-                    line-height: 1.5em;
-                    color: $grayish-blue;
                 }
             }
         }
-    }
-    .section-3 {
-        padding-top: 6em;
-        padding-bottom: 4em;
-        width: 60%;
-        // Setting Display
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-        h3 {
-            text-align: center;
-            padding-inline: 0px;
-            width: 100%;
-            font-size: 2.5em;
-            color: $dark-grayish-blue;
-        }
-        p {
-            text-align: center;
-            width: 80%;
-            padding-block: 1.2em;
-            text-align: center;
-            font-size: 1.2em;
-            color: $grayish-blue;
-            line-height: 1.5em;
-        }
-    }
-}
-
-footer {
-    background-color: hsla(0, 0%, 98%, 0.767);
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    padding-block: 2.5em;
-    .logo-holder {
-        img {
-            height: 4em;
-            width: 4em;
-        }
-    }
-    .link-holder {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 65%;
-        span {
-            padding-block: 0.5em;
-            width: 13em;
-            a {
-                text-decoration: unset;
-                @include set-fonts($sz: 1.2em, $wt: 200, $textCol: black);
-                &:hover {
-                    cursor: pointer;
-                    color: $strong-cyan;
-                }
+        .section-7 {
+            padding-block: 4em;
+            @include set-flex-display($dir: row, $algn-itm: center, $jst-ctnt: flex-start);
+            img {
+                padding-inline: 3em;
             }
         }
-    }
-    .social-button-holder {
-        padding-block: 2%;
-        div {
-            display: inline;
-            padding-inline: 0.5em;
-            span {}
-            a {
-                text-decoration: unset;
-                i {
+        .section-8 {
+            padding-block: 5em;
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
+            .__content-holder {
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+                @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+                text-align: center;
+                h2 {
+                    font-size: 2.5em;
                     color: $dark-grayish-blue;
-                    font-size: 1.5em;
                 }
-                &:hover {
-                    cursor: pointer;
-                    i {
-                        color: $strong-cyan;
+                p {
+                    width: 60%;
+                    padding-block: 1.2em;
+                    font-size: 1.2em;
+                    color: $grayish-blue;
+                }
+            }
+            .__buttons-holder {
+                padding-block: 2em;
+                @include set-flex-display($dir: row, $algn-itm: center, $jst-ctnt: center);
+                a {
+                    text-decoration: none;
+                    .button-1 {
+                        @include create-button($bg-color: $strong-cyan, $bdr-color: hsl(171, 66%, 33%));
+                    }
+                    .button-2 {
+                        @include create-button($bg-color: $light-blue, $bdr-color: hsl(233, 54%, 55%));
+                    }
+                    &:hover {
+                        cursor: pointer;
                     }
                 }
             }
         }
     }
-}
+    
+    footer {
+        background-color: hsla(0, 0%, 98%, 0.767);
+        @include set-flex-display($dir: row, $algn-itm: center, $jst-ctnt: space-around);
+        padding-block: 2.5em;
+        padding-inline: 7em;
+        .logo-holder {
+            padding-top: 0.8em;
+            img {
+                height: 4em;
+                width: 4em;
+            }
+        }
+        .link-holder {
+            @include set-flex-display($dir: row, $algn-itm: flex-start, $jst-ctnt: flex-start);
+            flex-wrap: wrap;
+            width: 65%;
+            span {
+                padding-block: 0.5em;
+                width: 15em;
+                a {
+                    text-decoration: unset;
+                    @include set-fonts($sz: 1.2em, $wt: 200, $textCol: black);
+                    &:hover {
+                        cursor: pointer;
+                        color: $strong-cyan;
+                    }
+                }
+            }
+        }
+        .social-button-holder {
+            padding-block: 2%;
+            div {
+                display: inline;
+                padding-inline: 0.5em;
+                a {
+                    text-decoration: unset;
+                    i {
+                        color: $dark-grayish-blue;
+                        font-size: 1.5em;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        i {
+                            color: $strong-cyan;
+                        }
+                    }
+                }
+            }
+        }
+    }

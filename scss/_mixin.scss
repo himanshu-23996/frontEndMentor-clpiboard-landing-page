@@ -5,3 +5,38 @@
     color: $textCol;
     font-size: $sz;
 }
+
+@mixin set-flex-display($dir:row, $algn-itm:center, $jst-ctnt:center) {
+    display: flex;
+    align-items: $algn-itm;
+    flex-direction: $dir;
+    justify-content: $jst-ctnt;
+}
+
+@mixin create-button($bg-color:$strong-cyan, $bdr-color:hsl(171, 66%, 33%)) {
+    @include set-fonts($sz: 1.2em, $wt: 600, $textCol: white);
+    margin-inline: 0.5em;
+    background-color: $bg-color;
+    padding-block: 0.8em;
+    padding-inline: 2em;
+    border-radius: 40px;
+    border-bottom: 4px solid $bdr-color;
+}
+
+@mixin create-section {
+    width: 60%;
+    // Setting Display
+    @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+    @include set-fonts($sz: 1.2em, $wt: 400, $textCol: $dark-grayish-blue);
+    text-align: center;
+    h2 {
+        font-size: 2.5em;
+    }
+    p {
+        width: 80%;
+        padding-block: 1em;
+        font-size: 1em;
+        color: $grayish-blue;
+        line-height: 1.5em;
+    }
+}

@@ -21,13 +21,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -42,43 +42,41 @@ header .__content-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 400;
-  color: black;
-  font-size: auto;
+  color: #4c545d;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 header .__content-holder h2 {
-  text-align: center;
-  padding-inline: 0px;
-  width: 100%;
-  font-size: 3em;
-  color: #4c545d;
+  font-size: 2.5em;
 }
 
 header .__content-holder p {
-  text-align: center;
   width: 80%;
-  padding-block: 1.2em;
-  text-align: center;
-  font-size: 1.2em;
+  padding-block: 1em;
+  font-size: 1em;
   color: #9fabb2;
+  line-height: 1.5em;
 }
 
 header .__buttons-holder {
-  padding-block: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -86,6 +84,7 @@ header .__buttons-holder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-block: 2em;
 }
 
 header .__buttons-holder a {
@@ -93,11 +92,11 @@ header .__buttons-holder a {
 }
 
 header .__buttons-holder a .button-1 {
-  margin-inline: 0.5em;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 600;
   color: white;
   font-size: 1.2em;
+  margin-inline: 0.5em;
   background-color: #26baa4;
   padding-block: 0.8em;
   padding-inline: 2em;
@@ -106,11 +105,11 @@ header .__buttons-holder a .button-1 {
 }
 
 header .__buttons-holder a .button-2 {
-  margin-inline: 0.5em;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 600;
   color: white;
   font-size: 1.2em;
+  margin-inline: 0.5em;
   background-color: #6173ff;
   padding-block: 0.8em;
   padding-inline: 2em;
@@ -126,13 +125,16 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 main .section-1 {
@@ -142,36 +144,33 @@ main .section-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 400;
   color: black;
   font-size: auto;
+  text-align: center;
 }
 
 main .section-1 h2 {
-  text-align: center;
-  padding-inline: 0px;
-  width: 100%;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #4c545d;
 }
 
 main .section-1 p {
-  text-align: center;
   width: 80%;
   padding-block: 1.2em;
-  text-align: center;
   font-size: 1.2em;
   color: #9fabb2;
+  font-weight: 200;
 }
 
 main .section-2 {
@@ -188,13 +187,13 @@ main .section-2 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -206,36 +205,13 @@ main .section-2 .content {
   font-size: auto;
 }
 
-main .section-2 .content .c-1 h3 {
+main .section-2 .content .c h2 {
+  color: #4c545d;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-main .section-2 .content .c-1 p {
-  font-size: 1em;
-  font-weight: 200;
-  line-height: 1.5em;
-  color: #9fabb2;
-}
-
-main .section-2 .content .c-2 h3 {
-  font-size: 1.5em;
-  font-weight: 400;
-}
-
-main .section-2 .content .c-2 p {
-  font-size: 1em;
-  font-weight: 200;
-  line-height: 1.5em;
-  color: #9fabb2;
-}
-
-main .section-2 .content .c-3 h3 {
-  font-size: 1.5em;
-  font-weight: 400;
-}
-
-main .section-2 .content .c-3 p {
+main .section-2 .content .c p {
   font-size: 1em;
   font-weight: 200;
   line-height: 1.5em;
@@ -249,50 +225,262 @@ main .section-3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 400;
   color: black;
   font-size: auto;
+  text-align: center;
 }
 
 main .section-3 h3 {
-  text-align: center;
-  padding-inline: 0px;
-  width: 100%;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #4c545d;
 }
 
 main .section-3 p {
-  text-align: center;
   width: 80%;
   padding-block: 1.2em;
-  text-align: center;
   font-size: 1.2em;
   color: #9fabb2;
   line-height: 1.5em;
+  font-weight: 200;
+}
+
+main .section-5 {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: auto;
+  text-align: center;
+}
+
+main .section-5 h3 {
+  font-size: 2em;
+  color: #4c545d;
+}
+
+main .section-5 p {
+  width: 80%;
+  padding-block: 1.2em;
+  font-size: 1.2em;
+  color: #9fabb2;
+  font-weight: 200;
+}
+
+main .section-6 {
+  padding-top: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .section-6 .display-feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  color: #4c545d;
+  font-size: 1.5em;
+  text-align: center;
+  padding-inline: 2.5em;
+}
+
+main .section-6 .display-feature h4 {
+  padding-top: 2em;
+}
+
+main .section-6 .display-feature p {
+  padding-block: 1.5em;
+  width: 300px;
+  color: #9fabb2;
+  font-size: 0.65em;
+  font-weight: 200;
+  line-height: 1.5em;
+}
+
+main .section-7 {
+  padding-block: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .section-7 img {
+  padding-inline: 3em;
+}
+
+main .section-8 {
+  padding-block: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .section-8 .__content-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: auto;
+  text-align: center;
+}
+
+main .section-8 .__content-holder h2 {
+  font-size: 2.5em;
+  color: #4c545d;
+}
+
+main .section-8 .__content-holder p {
+  width: 60%;
+  padding-block: 1.2em;
+  font-size: 1.2em;
+  color: #9fabb2;
+}
+
+main .section-8 .__buttons-holder {
+  padding-block: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .section-8 .__buttons-holder a {
+  text-decoration: none;
+}
+
+main .section-8 .__buttons-holder a .button-1 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2em;
+  margin-inline: 0.5em;
+  background-color: #26baa4;
+  padding-block: 0.8em;
+  padding-inline: 2em;
+  border-radius: 40px;
+  border-bottom: 4px solid #1d8c7b;
+}
+
+main .section-8 .__buttons-holder a .button-2 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2em;
+  margin-inline: 0.5em;
+  background-color: #6173ff;
+  padding-block: 0.8em;
+  padding-inline: 2em;
+  border-radius: 40px;
+  border-bottom: 4px solid #4e5dca;
+}
+
+main .section-8 .__buttons-holder a:hover {
+  cursor: pointer;
 }
 
 footer {
   background-color: rgba(250, 250, 250, 0.767);
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
   padding-block: 2.5em;
+  padding-inline: 7em;
+}
+
+footer .logo-holder {
+  padding-top: 0.8em;
 }
 
 footer .logo-holder img {
@@ -304,10 +492,16 @@ footer .link-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 65%;
@@ -315,7 +509,7 @@ footer .link-holder {
 
 footer .link-holder span {
   padding-block: 0.5em;
-  width: 13em;
+  width: 15em;
 }
 
 footer .link-holder span a {
