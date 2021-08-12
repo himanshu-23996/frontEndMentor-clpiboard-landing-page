@@ -77,6 +77,116 @@ header {
     }
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section-1 {
+        padding-top: 6em;
+        padding-bottom: 4em;
+        width: 60%;
+        // Setting Display
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+        h2 {
+            text-align: center;
+            padding-inline: 0px;
+            width: 100%;
+            font-size: 2.5em;
+            color: $dark-grayish-blue;
+        }
+        p {
+            text-align: center;
+            width: 80%;
+            padding-block: 1.2em;
+            text-align: center;
+            font-size: 1.2em;
+            color: $grayish-blue;
+        }
+    }
+    .section-2 {
+        display: flex;
+        img {
+            left: -100px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            padding-inline: 6em;
+            padding-bottom: 0em;
+            @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+            .c-1 {
+                h3 {
+                    font-size: 1.5em;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 1em;
+                    font-weight: 200;
+                    line-height: 1.5em;
+                    color: $grayish-blue;
+                }
+            }
+            .c-2 {
+                h3 {
+                    font-size: 1.5em;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 1em;
+                    font-weight: 200;
+                    line-height: 1.5em;
+                    color: $grayish-blue;
+                }
+            }
+            .c-3 {
+                h3 {
+                    font-size: 1.5em;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 1em;
+                    font-weight: 200;
+                    line-height: 1.5em;
+                    color: $grayish-blue;
+                }
+            }
+        }
+    }
+    .section-3 {
+        padding-top: 6em;
+        padding-bottom: 4em;
+        width: 60%;
+        // Setting Display
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+        h3 {
+            text-align: center;
+            padding-inline: 0px;
+            width: 100%;
+            font-size: 2.5em;
+            color: $dark-grayish-blue;
+        }
+        p {
+            text-align: center;
+            width: 80%;
+            padding-block: 1.2em;
+            text-align: center;
+            font-size: 1.2em;
+            color: $grayish-blue;
+            line-height: 1.5em;
+        }
+    }
+}
+
 footer {
     background-color: hsla(0, 0%, 98%, 0.767);
     height: auto;
