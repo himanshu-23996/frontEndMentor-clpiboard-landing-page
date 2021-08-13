@@ -314,6 +314,11 @@ main .section-5 p {
   line-height: 1.5em;
 }
 
+main .section-5 h3 {
+  font-size: 2em;
+  color: #4c545d;
+}
+
 main .section-5 p {
   line-height: unset;
   font-weight: 200;
@@ -373,10 +378,15 @@ main .section-6 .display-feature p {
   line-height: 1.5em;
 }
 
+main .section-6 .display-feature h4 {
+  font-size: 2em;
+  color: #4c545d;
+}
+
 main .section-6 .display-feature p {
   width: 300px;
   padding-block: 1.5em;
-  font-size: 0.65em;
+  font-size: 0.9em;
   font-weight: 200;
 }
 
@@ -620,10 +630,6 @@ footer .social-button-holder div a:hover i {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  header .__logo-holder {
-    padding-top: 7em;
-    padding-bottom: 3em;
-  }
   header .__content-holder {
     width: 60%;
     display: -webkit-box;
@@ -644,7 +650,6 @@ footer .social-button-holder div a:hover i {
     font-size: 1.2em;
     text-align: center;
     width: 90%;
-    text-align: center;
   }
   header .__content-holder h2 {
     font-size: 2em;
@@ -657,13 +662,8 @@ footer .social-button-holder div a:hover i {
     color: #9fabb2;
     line-height: 1.5em;
   }
-  header .__content-holder h2 {
-    font-size: 2.5em;
-  }
   header .__content-holder p {
     width: 100%;
-    padding-block: 1em;
-    font-size: 1em;
   }
   header .__buttons-holder {
     display: -webkit-box;
@@ -679,94 +679,19 @@ footer .social-button-holder div a:hover i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-block: 2em;
     padding-top: 1.3em;
   }
   header .__buttons-holder a {
     padding-block: 0.5em;
-    text-decoration: none;
   }
   header .__buttons-holder a .button-1 {
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
-    color: white;
-    font-size: 1.2em;
-    margin-inline: 0.5em;
-    background-color: #26baa4;
-    padding-block: 0.8em;
-    padding-inline: 2em;
-    border-radius: 40px;
-    border-bottom: 4px solid #1d8c7b;
     padding-block: 1em;
   }
   header .__buttons-holder a .button-2 {
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
-    color: white;
-    font-size: 1.2em;
-    margin-inline: 0.5em;
-    background-color: #6173ff;
-    padding-block: 0.8em;
-    padding-inline: 2em;
-    border-radius: 40px;
-    border-bottom: 4px solid #4e5dca;
     padding-block: 1em;
   }
-  header .__buttons-holder a:hover {
-    cursor: pointer;
-  }
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
   main .section-1 {
-    padding-top: 6em;
-    padding-bottom: 4em;
-    width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: 1.2em;
-    text-align: center;
-    width: 100%;
-  }
-  main .section-1 h2 {
-    font-size: 2em;
-    color: #4c545d;
-  }
-  main .section-1 p {
-    width: 80%;
-    padding-block: 1.2em;
-    font-size: 1.2em;
-    color: #9fabb2;
-    line-height: 1.5em;
-  }
-  main .section-1 p {
-    line-height: unset;
-    font-weight: 200;
+    width: 90%;
   }
   main .section-2 {
     display: -webkit-box;
@@ -804,10 +729,6 @@ footer .social-button-holder div a:hover i {
             justify-content: space-evenly;
     padding-inline: 1em;
     padding-block: 2em;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: auto;
     text-align: center;
   }
   main .section-2 .content .c {
@@ -816,58 +737,19 @@ footer .social-button-holder div a:hover i {
   }
   main .section-2 .content .c h3 {
     padding-block: 0.2em;
-    color: #4c545d;
-    font-size: 1.5em;
-    font-weight: 600;
   }
   main .section-2 .content .c p {
     padding-inline: 1.5em;
-    font-size: 1em;
-    font-weight: 200;
-    line-height: 1.5em;
-    color: #9fabb2;
   }
   main .section-3 {
-    padding-top: 6em;
     padding-bottom: 0em;
-    width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: 1.2em;
-    text-align: center;
     width: 100%;
-  }
-  main .section-3 h2 {
-    font-size: 2em;
-    color: #4c545d;
-  }
-  main .section-3 p {
-    width: 80%;
-    padding-block: 1.2em;
-    font-size: 1.2em;
-    color: #9fabb2;
-    line-height: 1.5em;
   }
   main .section-3 h3 {
     font-size: 1.5em;
-    color: #4c545d;
   }
   main .section-3 p {
     font-size: 0.8em;
-    font-weight: 200;
   }
   main .section-4 {
     padding-block: 3em;
@@ -888,47 +770,7 @@ footer .social-button-holder div a:hover i {
   main .section-4 img {
     width: 90%;
   }
-  main .section-5 {
-    width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: 1.2em;
-    text-align: center;
-  }
-  main .section-5 h2 {
-    font-size: 2em;
-    color: #4c545d;
-  }
-  main .section-5 p {
-    width: 80%;
-    padding-block: 1.2em;
-    font-size: 1.2em;
-    color: #9fabb2;
-    line-height: 1.5em;
-  }
-  main .section-5 h3 {
-    font-size: 2em;
-    color: #4c545d;
-  }
-  main .section-5 p {
-    line-height: unset;
-    font-weight: 200;
-  }
   main .section-6 {
-    padding-top: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -943,51 +785,15 @@ footer .social-button-holder div a:hover i {
         justify-content: space-around;
   }
   main .section-6 .display-feature {
-    width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: 1.2em;
-    text-align: center;
     width: 95%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  main .section-6 .display-feature h2 {
-    font-size: 2em;
-    color: #4c545d;
-  }
-  main .section-6 .display-feature p {
-    width: 80%;
-    padding-block: 1.2em;
-    font-size: 1.2em;
-    color: #9fabb2;
-    line-height: 1.5em;
   }
   main .section-6 .display-feature h4 {
-    font-size: 2em;
-    color: #4c545d;
+    font-size: 1.7em;
   }
   main .section-6 .display-feature p {
     width: 100%;
-    padding-block: 1.5em;
-    font-weight: 200;
   }
   main .section-7 {
-    padding-block: 4em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1006,64 +812,16 @@ footer .social-button-holder div a:hover i {
     padding-inline: unset;
     padding-block: 3em;
   }
-  main .section-8 {
-    padding-block: 5em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   main .section-8 .__content-holder {
-    width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: 1.2em;
-    text-align: center;
     width: 100%;
-  }
-  main .section-8 .__content-holder h2 {
-    font-size: 2em;
-    color: #4c545d;
-  }
-  main .section-8 .__content-holder p {
-    width: 80%;
-    padding-block: 1.2em;
-    font-size: 1.2em;
-    color: #9fabb2;
-    line-height: 1.5em;
   }
   main .section-8 .__content-holder h2 {
     font-size: 2em;
   }
   main .section-8 .__content-holder p {
     width: 85%;
-    color: #9fabb2;
-    line-height: unset;
   }
   main .section-8 .__buttons-holder {
-    padding-block: 2em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1080,37 +838,8 @@ footer .social-button-holder div a:hover i {
   }
   main .section-8 .__buttons-holder a {
     padding-block: 0.5em;
-    text-decoration: none;
-  }
-  main .section-8 .__buttons-holder a .button-1 {
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
-    color: white;
-    font-size: 1.2em;
-    margin-inline: 0.5em;
-    background-color: #26baa4;
-    padding-block: 0.8em;
-    padding-inline: 2em;
-    border-radius: 40px;
-    border-bottom: 4px solid #1d8c7b;
-  }
-  main .section-8 .__buttons-holder a .button-2 {
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
-    color: white;
-    font-size: 1.2em;
-    margin-inline: 0.5em;
-    background-color: #6173ff;
-    padding-block: 0.8em;
-    padding-inline: 2em;
-    border-radius: 40px;
-    border-bottom: 4px solid #4e5dca;
-  }
-  main .section-8 .__buttons-holder a:hover {
-    cursor: pointer;
   }
   footer {
-    background-color: rgba(250, 250, 250, 0.767);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1123,14 +852,9 @@ footer .social-button-holder div a:hover i {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding-block: 2.5em;
   }
   footer .logo-holder {
     padding-block: 1em;
-  }
-  footer .logo-holder img {
-    height: 4em;
-    width: 4em;
   }
   footer .link-holder {
     display: -webkit-box;
@@ -1148,42 +872,18 @@ footer .social-button-holder div a:hover i {
             justify-content: flex-start;
     -ms-flex-wrap: unset;
         flex-wrap: unset;
-    width: 65%;
   }
   footer .link-holder span {
     text-align: center;
     padding-block: 1em;
-    width: 15em;
   }
   footer .link-holder span a {
-    text-decoration: unset;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 400;
     color: #9fabb2;
     font-size: 1.2em;
   }
-  footer .link-holder span a:hover {
-    cursor: pointer;
-    color: #26baa4;
-  }
   footer .social-button-holder {
     padding-block: 10%;
-  }
-  footer .social-button-holder div {
-    display: inline;
-    padding-inline: 0.5em;
-  }
-  footer .social-button-holder div a {
-    text-decoration: unset;
-  }
-  footer .social-button-holder div a i {
-    color: #4c545d;
-    font-size: 1.5em;
-  }
-  footer .social-button-holder div a:hover {
-    cursor: pointer;
-  }
-  footer .social-button-holder div a:hover i {
-    color: #26baa4;
   }
 }
