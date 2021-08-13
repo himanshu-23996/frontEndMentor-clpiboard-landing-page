@@ -315,6 +315,8 @@
                 }
             }
             .section-4 {
+                padding-block: 3em;
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
                 img {
                     width: 90%;
                 }
