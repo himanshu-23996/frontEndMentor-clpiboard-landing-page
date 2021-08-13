@@ -27,15 +27,16 @@
     width: 60%;
     // Setting Display
     @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
-    @include set-fonts($sz: 1.2em, $wt: 400, $textCol: $dark-grayish-blue);
+    @include set-fonts($sz: 1.2em, $wt: 400, $textCol: black);
     text-align: center;
     h2 {
-        font-size: 2.5em;
+        font-size: 2em;
+        color: $dark-grayish-blue;
     }
     p {
         width: 80%;
-        padding-block: 1em;
-        font-size: 1em;
+        padding-block: 1.2em;
+        font-size: 1.2em;
         color: $grayish-blue;
         line-height: 1.5em;
     }

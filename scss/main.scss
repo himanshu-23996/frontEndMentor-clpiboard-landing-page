@@ -1,7 +1,7 @@
     @import './reset';
     @import './mixin';
     body {
-        width: 100%;
+        width: 100vw;
         height: auto;
     }
     
@@ -9,7 +9,7 @@
         // Setting Background
         background-image: url("../images/bg-header-desktop.png");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: top;
         // Setting Display
         @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
@@ -19,20 +19,14 @@
             padding-bottom: 3em;
         }
         .__content-holder {
-            width: 60%;
-            // Setting Display
-            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
-            @include set-fonts($sz: 1.2em, $wt: 400, $textCol: $dark-grayish-blue);
+            @include create-section;
             text-align: center;
             h2 {
                 font-size: 2.5em;
             }
             p {
-                width: 80%;
                 padding-block: 1em;
                 font-size: 1em;
-                color: $grayish-blue;
-                line-height: 1.5em;
             }
         }
         .__buttons-holder {
@@ -58,26 +52,16 @@
         .section-1 {
             padding-top: 6em;
             padding-bottom: 4em;
-            width: 60%;
-            // Setting Display
-            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
-            @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-            text-align: center;
-            h2 {
-                font-size: 2em;
-                color: $dark-grayish-blue;
-            }
+            @include create-section;
             p {
-                width: 80%;
-                padding-block: 1.2em;
-                font-size: 1.2em;
-                color: $grayish-blue;
+                line-height: unset;
                 font-weight: 200;
             }
         }
         .section-2 {
             display: flex;
             img {
+                position: relative;
                 left: -100px;
             }
             .content {
@@ -86,7 +70,7 @@
                 padding-bottom: 0em;
                 @include set-fonts($sz: auto, $wt: 400, $textCol: black);
                 .c {
-                    h2 {
+                    h3 {
                         color: $dark-grayish-blue;
                         font-size: 1.5em;
                         font-weight: 600;
@@ -103,40 +87,20 @@
         .section-3 {
             padding-top: 6em;
             padding-bottom: 4em;
-            width: 60%;
-            // Setting Display
-            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
-            @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-            text-align: center;
+            @include create-section;
             h3 {
                 font-size: 2em;
                 color: $dark-grayish-blue;
             }
             p {
-                width: 80%;
-                padding-block: 1.2em;
-                font-size: 1.2em;
-                color: $grayish-blue;
-                line-height: 1.5em;
                 font-weight: 200;
             }
         }
         .section-4 {}
         .section-5 {
-            width: 60%;
-            // Setting Display
-            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
-            @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-            text-align: center;
-            h3 {
-                font-size: 2em;
-                color: $dark-grayish-blue;
-            }
+            @include create-section;
             p {
-                width: 80%;
-                padding-block: 1.2em;
-                font-size: 1.2em;
-                color: $grayish-blue;
+                line-height: unset;
                 font-weight: 200;
             }
         }
@@ -144,20 +108,14 @@
             padding-top: 3em;
             @include set-flex-display($dir: row, $algn-itm: center, $jst-ctnt: space-around);
             .display-feature {
-                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
-                @include set-fonts($sz: 1.5em, $wt: 400, $textCol: $dark-grayish-blue);
-                text-align: center;
+                @include create-section;
+                justify-content: center;
                 padding-inline: 2.5em;
-                h4 {
-                    padding-top: 2em;
-                }
                 p {
-                    padding-block: 1.5em;
                     width: 300px;
-                    color: $grayish-blue;
+                    padding-block: 1.5em;
                     font-size: 0.65em;
                     font-weight: 200;
-                    line-height: 1.5em;
                 }
             }
         }
@@ -172,18 +130,15 @@
             padding-block: 5em;
             @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
             .__content-holder {
-                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
-                @include set-fonts($sz: auto, $wt: 400, $textCol: black);
-                text-align: center;
+                @include create-section;
+                width: unset;
                 h2 {
                     font-size: 2.5em;
-                    color: $dark-grayish-blue;
                 }
                 p {
                     width: 60%;
-                    padding-block: 1.2em;
-                    font-size: 1.2em;
                     color: $grayish-blue;
+                    line-height: unset;
                 }
             }
             .__buttons-holder {
@@ -249,6 +204,240 @@
                         cursor: pointer;
                         i {
                             color: $strong-cyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width:860px) {
+        header {
+            // Setting Background
+            background-image: url("../images/bg-header-mobile.png");
+            // Setting Display
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+            // Styling the children
+            .__logo-holder {
+                padding-top: 7em;
+                padding-bottom: 3em;
+            }
+            .__content-holder {
+                @include create-section;
+                width: 90%;
+                text-align: center;
+                h2 {
+                    font-size: 2.5em;
+                }
+                p {
+                    width: 100%;
+                    padding-block: 1em;
+                    font-size: 1em;
+                }
+            }
+            .__buttons-holder {
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
+                padding-block: 2em;
+                padding-top: 1.3em;
+                a {
+                    padding-block: 0.5em;
+                    text-decoration: none;
+                    .button-1 {
+                        @include create-button($bg-color: $strong-cyan, $bdr-color: hsl(171, 66%, 33%));
+                        padding-block: 1em;
+                    }
+                    .button-2 {
+                        @include create-button($bg-color: $light-blue, $bdr-color: hsl(233, 54%, 55%));
+                        padding-block: 1em;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        main {
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: flex-start);
+            .section-1 {
+                padding-top: 6em;
+                padding-bottom: 4em;
+                @include create-section;
+                width: 100%;
+                p {
+                    line-height: unset;
+                    font-weight: 200;
+                }
+            }
+            .section-2 {
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-evenly);
+                img {
+                    width: 90%;
+                    left: unset;
+                    position: unset;
+                }
+                .content {
+                    @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-evenly);
+                    padding-inline: 1em;
+                    padding-block: 2em;
+                    @include set-fonts($sz: auto, $wt: 400, $textCol: black);
+                    text-align: center;
+                    .c {
+                        padding-block: 1em;
+                        width: 90%;
+                        h3 {
+                            padding-block: 0.2em;
+                            color: $dark-grayish-blue;
+                            font-size: 1.5em;
+                            font-weight: 600;
+                        }
+                        p {
+                            padding-inline: 1.5em;
+                            font-size: 1em;
+                            font-weight: 200;
+                            line-height: 1.5em;
+                            color: $grayish-blue;
+                        }
+                    }
+                }
+            }
+            .section-3 {
+                padding-top: 6em;
+                padding-bottom: 0em;
+                @include create-section;
+                width: 100%;
+                h3 {
+                    font-size: 1.5em;
+                    color: $dark-grayish-blue;
+                }
+                p {
+                    font-size: 0.8em;
+                    font-weight: 200;
+                }
+            }
+            .section-4 {
+                img {
+                    width: 90%;
+                }
+            }
+            .section-5 {
+                @include create-section;
+                h3 {
+                    font-size: 2em;
+                    color: $dark-grayish-blue;
+                }
+                p {
+                    line-height: unset;
+                    font-weight: 200;
+                }
+            }
+            .section-6 {
+                padding-top: 3em;
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+                .display-feature {
+                    @include create-section;
+                    width: 95%;
+                    h4 {
+                        font-size: 2em;
+                        color: $dark-grayish-blue;
+                    }
+                    justify-content: center;
+                    // padding-inline: 2.5em;
+                    p {
+                        width: 100%;
+                        padding-block: 1.5em;
+                        // font-size: 0.65em;
+                        font-weight: 200;
+                    }
+                }
+            }
+            .section-7 {
+                padding-block: 4em;
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: flex-start);
+                img {
+                    padding-inline: unset;
+                    padding-block: 3em;
+                }
+            }
+            .section-8 {
+                padding-block: 5em;
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
+                .__content-holder {
+                    @include create-section;
+                    width: 100%;
+                    h2 {
+                        font-size: 2em;
+                    }
+                    p {
+                        width: 85%;
+                        color: $grayish-blue;
+                        line-height: unset;
+                    }
+                }
+                .__buttons-holder {
+                    padding-block: 2em;
+                    @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: center);
+                    a {
+                        padding-block: 0.5em;
+                        text-decoration: none;
+                        .button-1 {
+                            @include create-button($bg-color: $strong-cyan, $bdr-color: hsl(171, 66%, 33%));
+                        }
+                        .button-2 {
+                            @include create-button($bg-color: $light-blue, $bdr-color: hsl(233, 54%, 55%));
+                        }
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            background-color: hsla(0, 0%, 98%, 0.767);
+            @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: space-around);
+            padding-block: 2.5em;
+            // padding-inline: 7em;
+            .logo-holder {
+                padding-block: 1em;
+                img {
+                    height: 4em;
+                    width: 4em;
+                }
+            }
+            .link-holder {
+                @include set-flex-display($dir: column, $algn-itm: center, $jst-ctnt: flex-start);
+                flex-wrap: unset;
+                width: 65%;
+                span {
+                    text-align: center;
+                    padding-block: 1em;
+                    width: 15em;
+                    a {
+                        text-decoration: unset;
+                        @include set-fonts($sz: 1.2em, $wt: 400, $textCol: $grayish-blue);
+                        &:hover {
+                            cursor: pointer;
+                            color: $strong-cyan;
+                        }
+                    }
+                }
+            }
+            .social-button-holder {
+                padding-block: 10%;
+                div {
+                    display: inline;
+                    padding-inline: 0.5em;
+                    a {
+                        text-decoration: unset;
+                        i {
+                            color: $dark-grayish-blue;
+                            font-size: 1.5em;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            i {
+                                color: $strong-cyan;
+                            }
                         }
                     }
                 }
